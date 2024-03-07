@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    height: 570px ;
+    column-gap: 100px;
+    margin-bottom: 100px;
+}
+
+.subContainer{
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+}
+
+.user{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.userText{
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.optionsContainer{
+    width: 170px;
+}
+
+.subView{
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

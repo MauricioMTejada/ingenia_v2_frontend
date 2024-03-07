@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 64 64"
+   version="1.1"
+   id="svg186"
+   sodipodi:docname="book.svg"
+   width="64"
+   height="64"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview188"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="9.076923"
+     inkscape:cx="17.792373"
+     inkscape:cy="30.131356"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
+     inkscape:window-x="1991"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg186" />
+  <defs
+     id="defs163">
+    <style
+       id="style161">.cls-1{fill:#8bc4ff;}.cls-2{fill:#d1e7ff;}.cls-3{fill:#2e58ff;}</style>
+  </defs>
+  <title
+     id="title165">book</title>
+  <rect
+     class="cls-1"
+     x="2"
+     y="49.002743"
+     width="60"
+     height="7"
+     id="rect167"
+     style="fill:#ffc98b;fill-opacity:1" />
+  <path
+     class="cls-2"
+     d="m 32,15.002741 c 0,42.33 -0.06,40.9 0,41 a 13.89,13.89 0 0 0 -12.06,-7 H 2 V 8.0027418 H 19.94 A 13.89,13.89 0 0 1 32,15.002741 Z"
+     id="path169"
+     style="fill:#ffead1;fill-opacity:1" />
+  <path
+     class="cls-2"
+     d="M 62,8.0027418 V 49.002741 H 44.06 a 13.89,13.89 0 0 0 -12.06,7 c 0,-40.52 0.06,-41.1 0,-41 A 13.89,13.89 0 0 1 44.06,8.0027418 Z"
+     id="path171"
+     style="fill:#ffead1;fill-opacity:1" />
+  <path
+     class="cls-3"
+     d="M 62,6.0027419 H 44.06 A 15.91,15.91 0 0 0 32,11.562742 15.91,15.91 0 0 0 19.94,6.0027419 H 2 A 2,2 0 0 0 3.9999998e-8,8.0027418 V 56.002741 A 2,2 0 0 0 2,58.002741 h 60 a 2,2 0 0 0 2,-2 V 8.0027418 A 2,2 0 0 0 62,6.0027419 Z M 34,15.522741 A 11.92,11.92 0 0 1 44,10.002742 H 60 V 47.002741 H 44.06 a 15.91,15.91 0 0 0 -10.06,3.6 c 0,-23.43 0,-31.6 0,-35.08 z M 4.0000004,10.002742 H 19.94 A 11.94,11.94 0 0 1 30,15.552741 c 0,22.77 0,28.3 0,35 a 15.9,15.9 0 0 0 -10,-3.58 H 4.0000004 Z m 0,43.999999 v -3 H 19.94 a 11.91,11.91 0 0 1 7.89,3 z M 60,54.002741 H 36.18 a 11.91,11.91 0 0 1 7.88,-3 H 60 Z"
+     id="path173"
+     style="fill:#ff8a05;fill-opacity:1" />
+  <path
+     class="cls-3"
+     d="m 42,22.002741 h 12 a 2,2 0 0 0 0,-4 H 42 a 2,2 0 0 0 0,4 z"
+     id="path179"
+     style="fill:#ff8a05;fill-opacity:1" />
+  <path
+     class="cls-3"
+     d="m 42,31.002741 h 12 a 2,2 0 0 0 0,-4 H 42 a 2,2 0 0 0 0,4 z"
+     id="path181"
+     style="fill:#ff8a05;fill-opacity:1" />
+  <path
+     class="cls-3"
+     d="m 42,40.002741 h 12 a 2,2 0 0 0 0,-4 H 42 a 2,2 0 0 0 0,4 z"
+     id="path183"
+     style="fill:#ff8a05;fill-opacity:1" />
+  <path
+     class="cls-3"
+     d="m 10.784106,22.002741 h 12 a 2,2 0 0 0 0,-4 h -12 a 2.0000001,2.0000001 0 0 0 0,4 z"
+     id="path179-7"
+     style="fill:#ff8a05;fill-opacity:1" />
+  <path
+     class="cls-3"
+     d="m 10.784106,31.002741 h 12 a 2,2 0 0 0 0,-4 h -12 a 2,2 0 0 0 0,4 z"
+     id="path181-3"
+     style="fill:#ff8a05;fill-opacity:1" />
+  <path
+     class="cls-3"
+     d="m 10.784106,40.002741 h 12 a 2,2 0 0 0 0,-4 h -12 a 2,2 0 0 0 0,4 z"
+     id="path183-3"
+     style="fill:#ff8a05;fill-opacity:1" />
+  <metadata
+     id="metadata710">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>book</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

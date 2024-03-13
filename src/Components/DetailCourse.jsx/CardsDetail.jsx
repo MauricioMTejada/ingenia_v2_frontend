@@ -68,11 +68,11 @@ export function CardsDetail() {
         // Para que la página se visualice en la parte superior:
             window.scrollTo(0, 0);
         // Para consultar si el actual curso fue adquirido por el usuario:
-        let myCoursesString = localStorage.getItem("myCourses");
-        let myCourses = myCoursesString.includes(",") ? myCoursesString.split(",") : [myCoursesString];
+            let myCoursesString = localStorage.getItem("myCourses") || "";
+            let myCourses = myCoursesString.includes(",") ? myCoursesString.split(",") : [myCoursesString];
             if (!purchasedCourse) setPurchasedCourse(myCourses.includes(id))
         // Para consultar si el actual curso, fue calificado por el usuario:
-            let myRatingCoursesString = localStorage.getItem("myRatingCourses");
+            let myRatingCoursesString = localStorage.getItem("myRatingCourses") || "";
             let myRatingCourses = myRatingCoursesString.includes(",") ? myRatingCoursesString.split(",") : [myRatingCoursesString];
             if(!ratingCourse) setRatingCourse(myRatingCourses.includes(id))
 

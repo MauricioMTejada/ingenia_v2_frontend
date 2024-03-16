@@ -5,14 +5,15 @@ import { useSelector } from 'react-redux'
 
 
 export default function HomeCardComents() {
-  
+
   const articuls = useSelector((state)=>state.articulos);
   const comentarios = articuls.slice(0, 7);
 
   return (
     <>
     <Stack
-    sx={{ marginRight: "50px" }}
+    // sx={{ marginRight: "50px" }}
+      style={{ width: "100%"}}
      spacing={4}
     >
     {comentarios.map((comentario) => (

@@ -35,6 +35,7 @@ return (
     <>
     <BrowserRouter>
       {/* <AdministrationOfUsers /> */}
+      <div className='space-fixed-navbar'></div>
       <NavBar/>
         <Routes>
           <Route exact path="/" element={<Home/>} />

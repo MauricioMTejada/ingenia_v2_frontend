@@ -96,13 +96,16 @@ export function CardsDetail() {
     <Card sx={{
         display: 'flex',
         alignItems: 'center',
+        padding: '10px',
         }}
         >
+
         <CardMedia
-          sx={{ height: 300, width: 700}}
-          component='img'
-          image= {curses.image}
-          title="imagen de curso"
+            // sx={{ height: 300, width: 700}}
+            style={{ width: '40%', height: 'auto' }}
+            component='img'
+            image= {curses.image}
+            title="imagen de curso"
         />
 
         <CardContent>
@@ -110,8 +113,9 @@ export function CardsDetail() {
                 direction="column"
                 justifyContent="flex-start"
                 alignItems="flex-start"
-                marginLeft={5}
-                padding={1} >
+                // marginLeft={5}
+                // padding={1}
+                >
 
                 <Grid >
                     <Typography gutterBottom variant="h3" component="h3" sx={{

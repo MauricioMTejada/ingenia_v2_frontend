@@ -1,16 +1,15 @@
-import { Box, Typography } from '@mui/material'
-import Cards from '../../Card/Cards'
+import { Box, Typography } from "@mui/material";
+import Cards from "../../Card/Cards";
+import { TitleSection } from "../../../utils/TitleSection";
 
 export default function HomeTopVentas() {
-  return (
-    <Box
-      sx={{ 
-        maxWidth: "700px"
-      }}
-    >
-      <Typography variant="h5" color="primary"  sx={{marginBottom:4, marginLeft: "-0px" }} align='left'>Top ventas</Typography>
-      <Cards/>
-        
-    </Box>
-  )
+	return (
+		<Box >
+
+			<TitleSection title={"Top Ventas"} />
+
+			<Cards />
+
+		</Box>
+	);
 }

@@ -94,8 +94,8 @@ export default function NavBar() {
   }
 
   return (
-    <div>
-      <AppBar position="static" elevation={0} sx={{ bgcolor: "background.default" }} >
+    <div className="navbar">
+      <AppBar position="fixed" elevation={0} sx={{ bgcolor: "background.default" }} >
         <div style={{ display: "flex", flexGrow: 1, justifyContent: "space-between", margin: "30px 30px 25px 0", }} >
 
           {/* Logo ingenia */}
@@ -160,26 +160,30 @@ export default function NavBar() {
               {/* Carrito - Modo Dark/Ligth */}
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", }} >
                   {/* Carrito */}
-                      {userType == 1 || userType == 0 ? (<Box> <NavLink to="/Carrito">
-                      <IconButton color="primary" aria-label="upload picture" component="label" >
-                      {/* <input hidden accept="image/*" type="file" /> */}
-                      <Badge badgeContent={cartCourses} color="secondary">
-                      <Tooltip title="Carrito" placement="top">
-                      <ShoppingCartIcon />
-                      </Tooltip>
-                      </Badge>
-                      </IconButton>
-                      </NavLink> </Box>) : null}
+                      {userType == 1 || userType == 0 ? (
+                        <Box>
+                          <NavLink to="/Carrito">
+                            <IconButton color="primary" aria-label="upload picture" component="label" >
+                            {/* <input hidden accept="image/*" type="file" /> */}
+                              <Badge badgeContent={cartCourses} color="secondary">
+                                <Tooltip title="Carrito" placement="top">
+                                  <ShoppingCartIcon />
+                                </Tooltip>
+                              </Badge>
+                            </IconButton>
+                          </NavLink>
+                        </Box>
+                      ) : null}
 
                   {/* Mode Dark/Ligth */}
                       <Box sx={{ justifyContent: "center", color: "text.primary"}}>
-                      <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit" >
-                      <Tooltip title="Dark / Ligth" placement="top">
-                      <div>
-                      {theme.palette.mode === "dark" ? ( <DarkModeIcon color="primary" /> ) : ( <LightModeIcon color="primary" /> )}
-                      </div>
-                      </Tooltip>
-                      </IconButton>
+                        <IconButton sx={{ ml: 0 }} onClick={colorMode.toggleColorMode} color="primary" >
+                          <Tooltip title="Dark / Ligth" placement="top">
+                            <div style={{ width: "24px", height: "24px", }}>
+                              {theme.palette.mode === "dark" ? ( <DarkModeIcon color="primary" /> ) : ( <LightModeIcon color="primary" /> )}
+                            </div>
+                          </Tooltip>
+                        </IconButton>
                       </Box>
                   </div>
 

@@ -1,0 +1,46 @@
+/* .navbar {
+    border-bottom: 1px solid #3d3d3d;
+    padding: 5px 0;
+} */
+
+.navbarDark {
+    border-bottom: 1px solid #494949; /* color del borde en modo oscuro */
+    padding: 5px 0;
+}
+
+.navbarLight {
+    border-bottom: 1px solid #c4c4c4; /* color del borde en modo claro */
+    padding: 5px 0;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: "50px 0";
+}
+
+.gridItemNavbar01 {
+    grid-column: 1;
+    grid-row: 1;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.gridItemNavbar02 {
+    grid-column: 2;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+/* .styleNativeContainer {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    margin: 30px 30px 25px 0;
+} */

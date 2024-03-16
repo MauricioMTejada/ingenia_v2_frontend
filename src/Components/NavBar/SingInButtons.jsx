@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 
 export default function SingInButtons({ themeMode }) {
   return (
-    <div 
-      style={{ 
-        display: "flex", 
-        justifyContent: "flex-end", 
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "flex-end",
         alignItems: "center",
         columnGap: "20px",
-        marginLeft: "10px",
+        margin: "0 3rem",
       }}
     >
       {" "}
-    
+
         <Button
           color="primary"
           variant="outlined"
@@ -26,12 +26,12 @@ export default function SingInButtons({ themeMode }) {
             er: "5px solid",
             width: "165px",
           }}
-          component={Link} 
+          component={Link}
           to={"/Login"}
         >
           Iniciar Sesión
         </Button>
-   
+
         <Button
           color="primary"
           variant="contained"
@@ -42,7 +42,7 @@ export default function SingInButtons({ themeMode }) {
             width: "165px",
             boxShadow: 0,
           }}
-          component={Link} 
+          component={Link}
           to={"/SignupUsuario"}
         >
           {" "}

@@ -62,12 +62,13 @@ export default function MenuAvatar({userType}) {
 
 
   return (
-    <React.Fragment>
+    <div style={{ margin: "0 3rem" }}>
+    <React.Fragment >
 
       {/* Ícono principal del Avatar: */}
           <Box sx={{ display: "flex", alignItems: "center", textAlign: "center" }}>
               <Tooltip title="Cuenta de Usuario" placement="top">
-              <IconButton onClick={handleClick} size="small" sx={{ ml: 2 }}
+              <IconButton onClick={handleClick} size="small"
                 aria-controls={open ? "account-menu" : undefined}
                 aria-haspopup="true" aria-expanded={open ? "true" : undefined} >
               <AvatarComponent width={"32px"} height={"32px"} fontSize={"15px"} />
@@ -82,7 +83,9 @@ export default function MenuAvatar({userType}) {
         PaperProps={{
           elevation: 0,
           sx: { overflow: "visible", filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))", mt: 1.5,
-            "& .MuiAvatar-root": { width: 32, height: 32, ml: -0.5, mr: 1, },
+            "& .MuiAvatar-root": { width: 32, height: 32,
+              ml: -0.5, mr: 1,
+            },
             "&:before": { content: '""', display: "block", position: "absolute", top: 0, right: 14, width: 10, height: 10, bgcolor: "background.paper", transform: "translateY(-50%) rotate(45deg)", zIndex: 0, },
           },
         }}
@@ -133,6 +136,6 @@ export default function MenuAvatar({userType}) {
       {/* Muestra la ventana modal si openModal es true */}
       {openModal && <LogoutComponent onClose={() => setOpenModal(false)} />}
 
-    </React.Fragment>
+    </React.Fragment></div>
   );
 }

@@ -1,10 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 //material UI
-import {
-	AppBar,
-	Box,
-} from "@mui/material";
+import { AppBar, Box } from "@mui/material";
 import { useTheme } from "@emotion/react";
 //componente
 import { ColorModeContext } from "../Layout";
@@ -83,7 +80,8 @@ export default function NavBar() {
 	const theme = useTheme();
 	const colorMode = React.useContext(ColorModeContext);
 	const themeMode = theme.palette.mode === "light" ? "black" : "white";
-    const navbarClass = (theme.palette.mode === "dark") ? styles.navbarDark : styles.navbarLight;
+	const navbarClass =
+		theme.palette.mode === "dark" ? styles.navbarDark : styles.navbarLight;
 
 	// Estado del Tab en Cursos/Favoritos:
 	const tabSet = (activeTab) => {
@@ -91,25 +89,62 @@ export default function NavBar() {
 	};
 
 	return (
-			<AppBar position="fixed" elevation={0} className={navbarClass} sx={{ bgcolor: "background.default" }}>
-				<div className={styles.gridContainer}>
-
-					<div className={styles.gridItemNavbar01}>
-						<LogoIngenia />
-						<SearchBar />
-					</div>
-
-					<div className={styles.gridItemNavbar02}>
-						{userType == 2 &&  <Publicaciones userType={userType} />}
-						{userType == 2 && <Articulos userType={userType} />}
-						{userType === 1 && <MisCursos tabSet={tabSet} />}
-						{userType === 1 && <Favoritos tabSet={tabSet} favoriteLength={favoriteLength} />}
-						{(userType == 0 || userType == 1) && <Carrito userType={userType} cartCourses={cartCourses} /> }
-						<ThemeMode theme={theme} colorMode={colorMode} />
-						{(userType === 1 || userType === 2) && ( <Box> <MenuAvatar userType={userType} /> </Box> )}
-						{userType === 0 && <SingInButtons themeMode={themeMode} />}
-					</div>
+		<AppBar
+			position="fixed"
+			elevation={0}
+			className={navbarClass}
+			sx={{ bgcolor: "background.default" }}>
+			<div className={styles.gridContainer}>
+				<div className={styles.gitdItem01}>
+					<LogoIngenia />
 				</div>
-			</AppBar>
+
+				<div className={styles.gitdItem02}>
+					<SearchBar />
+				</div>
+
+				{userType == 2 && (
+					<div className={styles.gitdItem03}>
+						<Publicaciones userType={userType} />
+					</div>
+				)}
+
+				{userType == 2 && (
+					<div className={styles.gitdItem04}>
+						<Articulos userType={userType} />
+					</div>
+				)}
+
+				{userType === 1 && (
+					<div className={styles.gitdItem05}>
+						<MisCursos tabSet={tabSet} />
+					</div>
+				)}
+				{userType === 1 && (
+					<Favoritos tabSet={tabSet} favoriteLength={favoriteLength} />
+				)}
+
+				{(userType == 0 || userType == 1) && (
+					<Carrito userType={userType} cartCourses={cartCourses} />
+				)}
+
+				<ThemeMode theme={theme} colorMode={colorMode} />
+
+				{(userType === 1 || userType === 2) && (
+					<div className={styles.gitdItem09}>
+						{" "}
+						<MenuAvatar userType={userType} />{" "}
+					</div>
+				)}
+
+				{userType === 0 && (
+					<div className={styles.gitdItem10}>
+						<SingInButtons themeMode={themeMode} />
+					</div>
+				)}
+
+				{/* </div> */}
+			</div>
+		</AppBar>
 	);
 }

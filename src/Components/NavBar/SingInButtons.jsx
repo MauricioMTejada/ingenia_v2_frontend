@@ -8,7 +8,7 @@ export default function SingInButtons({ themeMode }) {
         display: "flex",
         justifyContent: "flex-end",
         alignItems: "center",
-        columnGap: "20px",
+        columnGap: "36px",
         margin: "0 3rem",
       }}
     >
@@ -19,11 +19,10 @@ export default function SingInButtons({ themeMode }) {
           variant="outlined"
           sx={{
             whiteSpace: "nowrap",
-            mr: 2,
+            // mr: 2,
             color: themeMode,
             fontWeight: "400",
             fontSize: "15px",
-            er: "5px solid",
             width: "165px",
           }}
           component={Link}

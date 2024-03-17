@@ -15,32 +15,68 @@
 
 .gridContainer {
     display: grid;
-    grid-template-columns: auto auto;
-    padding: "50px 0";
+    grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
+    gap: 0;
+    grid-row-gap: 5px;
+    justify-content: center;
+    align-items: center;
 }
 
 .gridItemNavbar01 {
-    grid-column: 1;
-    grid-row: 1;
-
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
-
 }
 
 .gridItemNavbar02 {
-    grid-column: 2;
-
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
 }
-/* .styleNativeContainer {
+
+.gitdItem01 {
+    grid-column: span 3;
+}
+
+.gitdItem02 {
+    grid-column: span 8;
     display: flex;
-    flex-grow: 1;
-    justify-content: space-between;
-    margin: 30px 30px 25px 0;
-} */
+    justify-content: center;
+}
+
+.gitdItem03 {
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+}
+
+.gitdItem04 {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+}
+
+.gitdItem05 {
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+}
+
+.gitdItem06{
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+}
+
+.gitdItem09{
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+}
+
+.gitdItem10{
+    grid-column: span 7;
+    display: flex;
+    justify-content: center;
+}

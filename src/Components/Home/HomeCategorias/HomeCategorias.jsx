@@ -9,11 +9,18 @@ import { TitleSection } from "../../../utils/TitleSection";
 export default function HomeCategorias() {
 	const dispatch = useDispatch();
 	const categorias = useSelector((state) => state.categories);
+	// console.log(categorias)
 
-	const handledispach = (categori) => {
-		dispatch(filterCoursesCategory(categori.idCategory));
-		dispatch(getCoursesCategory([categori.name]));
-	};
+    const handledispach = (categoria) => {
+		if (categoria) {
+			// console.log(`categoría en HomeCategorías`);
+			// console.log(categoria);
+			dispatch(filterCoursesCategory(categoria.idCategory));
+			dispatch(getCoursesCategory(categoria.name));
+			// filterCoursesCategory(categoria.idCategory);
+			// getCoursesCategory(categoria.name);
+		}
+    };
 
 	return (
 		<Box style={{ width: "100%" }}>

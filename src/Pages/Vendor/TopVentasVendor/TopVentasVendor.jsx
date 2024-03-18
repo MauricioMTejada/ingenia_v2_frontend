@@ -5,13 +5,13 @@ import { CardsTopv } from './CardsTopv'
 export const TopVentasVendor = () => {
     return (
         <Box
-            sx={{ 
-                maxWidth: "700px"
+            sx={{
+                // padding: '20px'
         }}
         >
             <Typography variant="h5" color="primary" align='left' marginBottom={5}>Cursos Registrados</Typography>
             <CardsTopv/>
-            
+
         </Box>
     )
 }

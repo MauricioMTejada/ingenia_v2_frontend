@@ -43,7 +43,8 @@ function DetailCourse() {
                 alignItems="flex-start"
                 className='interno dos'
                 marginTop={5}
-                maxHeight={300}>
+                // maxHeight={300}
+                >
                 <Grid item xs={5}>
                     <Grid >
                         <Typography gutterBottom variant="h5" component="div" sx={{

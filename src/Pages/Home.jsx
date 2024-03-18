@@ -4,17 +4,6 @@ import NotificationSnackbar from "../Components/NotificationSnackbar/Notificatio
 import { Stack } from "@mui/material";
 
 export default function Home() {
-	// return (
-	// 	<Stack
-	//    justifyContent="center"
-	// 	alignItems="center"
-	// 	spacing={2}
-	// 	>
-	// 	  {/* <NotificationSnackbar/> */}
-	// 	  <HomeComponent/>
-	// 	</Stack>
-	//   )
-
 	return (
 		<div
 			className="style-home"

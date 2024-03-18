@@ -1,29 +1,26 @@
-import { Box, Stack} from '@mui/material'
-import React from 'react'
-import Formulario from './Formulario'
-import Detallededompara from './Detallededompara'
-import Detallesdelpedido from './Detallesdelpedido'
-
+import { Box, Stack } from "@mui/material";
+import React from "react";
+import Formulario from "./Formulario";
+import Detallesdelpedido from "./Detallesdelpedido";
+import DetalleCompra from "./DetalleCompra";
 
 export default function Pay() {
- 
-  return (
-    <Box sx={{padding:5,marginBottom:30}}>
-      <Stack
-      direction="row"
-      justifyContent="space-around"
-      alignItems="center"
-      spacing={4}
-      >
-        <Box>
-        < Detallesdelpedido/>
-        </Box>
-        <Box  >
-          <Detallededompara/>
-          <Formulario/>
-        </Box>
-      </Stack>
-      
-    </Box>
-  )
+	return (
+			<Stack
+				direction="column"
+				justifyContent="space-around"
+				alignItems="flex-start"
+				spacing={4}>
+
+				<Box sx={{ width: "100%" }}>
+					<DetalleCompra />
+					<Formulario />
+				</Box>
+
+				<Box>
+					<Detallesdelpedido />
+				</Box>
+
+			</Stack>
+	);
 }

@@ -15,40 +15,41 @@ export const VendedorPublico = () => {
   const handleTabChange = (event, newTabIndex) => {
       setTabIndex(newTabIndex);
   };
-  
+
   return (
-    <Grid>
+    <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", width: "100%", maxWidth: "700px", margin: "0 auto" }}>
         <CardVendedor/>
 
-        <Grid container spacing={2}>
+        <Grid container style={{ padding: '30px', }}>
 
-            <Grid item xs={6.5} marginLeft={20} marginTop={10}>
+            <Grid item xs={6.5} >
               <TopVentasVendor/>
             </Grid>
 
-            <Grid item xs={0} marginTop={10}>
+            <Grid item xs={0} className="SegundoItem">
               <PublicacionesRecientes/>
             </Grid>
-            
+
         </Grid>
+
         <div>
           <Box>
-              <Tabs 
-                value={tabIndex} 
+              <Tabs
+                value={tabIndex}
                 onChange={handleTabChange}
                 centered
               >
-              <Tab 
-                label="Cursos" 
+              <Tab
+                label="Cursos"
                 sx={{ fontSize: "16px" }}
               />
-              <Tab 
-                label="Artículos" 
-                sx={{ fontSize: "16px" }}  
+              <Tab
+                label="Artículos"
+                sx={{ fontSize: "16px" }}
               />
-              <Tab 
-                label="Valoraciones" 
-                sx={{ fontSize: "16px" }}  
+              <Tab
+                label="Valoraciones"
+                sx={{ fontSize: "16px" }}
               />
               </Tabs>
               <Box sx={{ padding: 2 }}>
@@ -73,6 +74,6 @@ export const VendedorPublico = () => {
               </Box>
           </Box>
         </div>
-    </Grid>
+    </div>
   )
 }

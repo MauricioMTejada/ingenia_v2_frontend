@@ -20,10 +20,10 @@ export default function Article() {
 
     useEffect(()=> {
         dispatch(getDetailArticle(id));
-        
+
     }, [id]);
 
-    console.log(article);    
+    // console.log(article);
 
     function stringAvatar(userHeight, userWidth, userFontSize) {
         const name = article.user?.name || "*"
@@ -56,21 +56,21 @@ export default function Article() {
 
   return (
     <div className={styles.container}>
-       {!article.asset && 
+       {!article.asset &&
         <div className={styles.errorBanner}>
             <ErrorOutlineIcon/>
             <h5 className={styles.errorText}>
                 Este Artículo se encuentra pausado
             </h5>
         </div>
-       } 
- 
+       }
+
        {article.asset ?
             <div className={styles.subContainer}>
             <h3 className={styles.title}>
                 {article.title}
             </h3>
-            <NavLink 
+            <NavLink
                 to={`/VendedorPublico/${article.UserIdUser}`}
                 style={{textDecoration: 'none'}}
             >
@@ -80,10 +80,10 @@ export default function Article() {
             </NavLink>
                 <div className={styles.containerText}>
                     <div className={styles.imageContainer}>
-                        <img 
+                        <img
                             src={`${article.img}`}
-                            alt="img_publication" 
-                            className={styles.image}    
+                            alt="img_publication"
+                            className={styles.image}
                         />
                     </div>
                     <div className={styles.containerParagraph}>
@@ -95,22 +95,22 @@ export default function Article() {
                         </p>
                     </div>
                 </div>
-                {(article.subtitleTwo || article.subtitleThree)  && 
+                {(article.subtitleTwo || article.subtitleThree)  &&
                 <div className={styles.containersubText}>
-                    {article.subtitleTwo && 
+                    {article.subtitleTwo &&
                         <div className={styles.containerParagraph}>
                             <h3 className={styles.subtitle}>
-                                {article.subtitleTwo} 
+                                {article.subtitleTwo}
                             </h3>
                             <p className={styles.text}>
                                 {article.textTwo}
                             </p>
                     </div>
                     }
-                    {article.subtitleThree && 
+                    {article.subtitleThree &&
                         <div className={styles.containerParagraph}>
                             <h3 className={styles.subtitle}>
-                                {article.subtitleThree} 
+                                {article.subtitleThree}
                             </h3>
                             <p className={styles.text}>
                                 {article.textThree}
@@ -124,7 +124,7 @@ export default function Article() {
                 <h3 className={styles.titleOff}>
                     {article.title}
                 </h3>
-                <NavLink 
+                <NavLink
                     to={`/VendedorPublico/${article.UserIdUser}`}
                     style={{textDecoration: 'none'}}
                 >
@@ -134,10 +134,10 @@ export default function Article() {
                 </NavLink>
                     <div className={styles.containerText}>
                         <div className={styles.imageContainer}>
-                            <img 
+                            <img
                                 src={`${article.img}`}
-                                alt="img_publication" 
-                                className={styles.image}    
+                                alt="img_publication"
+                                className={styles.image}
                             />
                         </div>
                         <div className={styles.containerParagraph}>
@@ -149,22 +149,22 @@ export default function Article() {
                             </p>
                         </div>
                     </div>
-                    {(article.subtitleTwo || article.subtitleThree)  && 
+                    {(article.subtitleTwo || article.subtitleThree)  &&
                     <div className={styles.containersubText}>
-                        {article.subtitleTwo && 
+                        {article.subtitleTwo &&
                             <div className={styles.containerParagraph}>
                                 <h3 className={styles.subtitleOff}>
-                                    {article.subtitleTwo} 
+                                    {article.subtitleTwo}
                                 </h3>
                                 <p className={styles.textOff}>
                                     {article.textTwo}
                                 </p>
                         </div>
                         }
-                        {article.subtitleThree && 
+                        {article.subtitleThree &&
                             <div className={styles.containerParagraph}>
                                 <h3 className={styles.subtitleOff}>
-                                    {article.subtitleThree} 
+                                    {article.subtitleThree}
                                 </h3>
                                 <p className={styles.textOff}>
                                     {article.textThree}
@@ -173,9 +173,9 @@ export default function Article() {
                         }
                     </div>
                     }
-            </div> 
+            </div>
        }
-  
+
 
       <div className={styles.subContainerInfo}>
           <div className={styles.subModule}>
@@ -185,7 +185,7 @@ export default function Article() {
             <div className={styles.userInfo} >
                 <Avatar {...stringAvatar( '80px', '80px', '40px')} />
                 <div className={styles.containerName}>
-                    <NavLink 
+                    <NavLink
                         to={`/VendedorPublico/${article.UserIdUser}`}
                         style={{textDecoration: 'none'}}
                     >
@@ -193,30 +193,30 @@ export default function Article() {
                             {article.user?.name} {article.user?.lastname}
                         </h5>
                     </NavLink>
-                   
+
                     <div className={styles.rating}>
-                        <Typography  
-                            variant="body2" 
+                        <Typography
+                            variant="body2"
                             sx={{ color: "#e91e63" }}
                         >
                             {ratings}
                         </Typography>
-                        <Rating 
-                            name="half-rating-read" 
-                            precision={0.5} 
-                            value={ratings} 
-                            readOnly 
-                            sx={{ 
-                                color: "#e91e63", 
+                        <Rating
+                            name="half-rating-read"
+                            precision={0.5}
+                            value={ratings}
+                            readOnly
+                            sx={{
+                                color: "#e91e63",
                                 marginLeft: "5px"
-                            }} 
+                            }}
                         />
                     </div>
                 </div>
             </div>
             <p>{article.user?.description}  </p>
           </div>
-          {/* {article.user?.Courses.length >= 1 && 
+          {/* {article.user?.Courses.length >= 1 &&
           <div className={styles.subModule}>
             <h3 className={styles.subtitle}>
                 Cursos de {article.user?.name}
@@ -241,7 +241,7 @@ export default function Article() {
       </div>
 
 
-   
+
     </div>
   )
 }

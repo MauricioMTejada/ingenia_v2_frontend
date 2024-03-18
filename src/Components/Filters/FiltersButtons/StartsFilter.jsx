@@ -21,17 +21,17 @@ export default function StartsFilter() {
         name="radio-buttons-group"
         onChange={handleChange}
       >
-        <FormControlLabel value="5" control={<Radio color='secondary' />}
+        <FormControlLabel value={5} control={<Radio color='secondary' />}
           label={<Stack direction="row">
-            <Rating name="read-only" value="5" readOnly sx={{ color: "#e91e63" }} />
+            <Rating name="read-only" value={5} readOnly sx={{ color: "#e91e63" }} />
             <Typography component="legend" >5 estrellas</Typography>
           </Stack>} />
-        <FormControlLabel value="4" control={<Radio color='secondary' />} label={<Stack direction="row">
-          <Rating name="read-only" value="4" readOnly sx={{ color: "#e91e63" }} />
+        <FormControlLabel value={4} control={<Radio color='secondary' />} label={<Stack direction="row">
+          <Rating name="read-only" value={4} readOnly sx={{ color: "#e91e63" }} />
           <Typography component="legend" >4 estrellas</Typography>
         </Stack>} />
-        <FormControlLabel value="3" control={<Radio color='secondary' />} label={<Stack direction="row">
-          <Rating name="read-only" value="3" readOnly sx={{ color: "#e91e63" }} />
+        <FormControlLabel value={3} control={<Radio color='secondary' />} label={<Stack direction="row">
+          <Rating name="read-only" value={3} readOnly sx={{ color: "#e91e63" }} />
           <Typography component="legend" >3 estrellas</Typography>
         </Stack>} />
       </RadioGroup>

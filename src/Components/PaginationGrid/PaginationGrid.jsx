@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Box, Grid, Pagination, Stack } from '@mui/material';
 import { useState } from 'react';
 import CardHome from '../Card/CardHome'
+import styles from './PaginationGrid.module.css'
 
 
 export default function PaginationGrid({ arrayPag, visualize }) {
@@ -33,12 +34,12 @@ export default function PaginationGrid({ arrayPag, visualize }) {
         pageCurrent: ${pageCurrent}` ); */
 
 return (
-    <Box  >
+    <div>
 
         {/* Renderizado de las tarjetas a visualizar */}
-          <Grid container spacing={5} sx={{marginLeft:3 }} >
+        <div className={styles.contentGrid}>
             {elemToDisplay.map((curso) => (
-              <Grid item xs={3} sm={6} md={3} xl={3} key={curso.idCourse}>
+              <div className={styles.itemGrid} key={curso.idCourse}>
                 <CardHome
                   key={curso.idCourse}
                   idCourse = {curso.idCourse}
@@ -50,15 +51,15 @@ return (
                   price={curso.price}
                   habilities={curso.habilities}
                 />
-              </Grid>
+              </div>
             ))}
-          </Grid>
+          </div>
 
         {/* Numeración de la Paginación (si hay más de una página) */}
         {pageTotal > 1 ?
         (<Pagination count={pageTotal}  page={pageCurrent} onChange={handlePageChange} color="primary"/>) : null}
 
 
-    </Box>
+    </div>
   );
 }

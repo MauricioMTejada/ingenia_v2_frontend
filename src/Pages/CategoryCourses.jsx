@@ -3,12 +3,13 @@ import CategoryCoursesComponest from '../Components/CategoryCoures/CategoryCours
 import { Box } from '@mui/material'
 import { useDispatch } from 'react-redux';
 import { getCoursesCategory } from '../Redux/Actions/getCoursescategory';
+import { SpaceFixedNavbar } from '../utils/SpaceFixedNavbar';
 export default function CategoryCourses() {
   const dispatch = useDispatch();
 
-  useEffect(()=> {
-    dispatch(getCoursesCategory());
-  }, [dispatch])
+  // useEffect(()=> {
+  //   dispatch(getCoursesCategory());
+  // }, [dispatch])
   return (
    <Box >
     <CategoryCoursesComponest/>

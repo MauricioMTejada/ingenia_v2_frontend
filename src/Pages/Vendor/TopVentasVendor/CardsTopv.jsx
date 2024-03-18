@@ -11,7 +11,10 @@ export const CardsTopv = () => {
 
     return (
         <Box  >
-            <Grid container spacing={10}>
+            <Grid
+            container
+            // spacing={10}
+            >
                 {cursos.map((curso) => (
                     <Grid item xs={2} sm={6} md={4} key={curso.idCourse}>
                         <CardHome

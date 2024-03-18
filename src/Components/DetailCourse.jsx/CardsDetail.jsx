@@ -154,7 +154,8 @@ export function CardsDetail() {
                             {/* {curses.lenguage} */}
                         </Typography>
 
-                        <Grid width={600}
+                        <Grid
+                            // width={600}
                             container
                             direction="row"
                             justifyContent="space-between"
@@ -188,7 +189,8 @@ export function CardsDetail() {
                             </Grid>
                         </Grid>
 
-                        <Grid width={600}
+                        <Grid
+                            // width={600}
                             container
                             direction="row"
                             justifyContent="flex-start"

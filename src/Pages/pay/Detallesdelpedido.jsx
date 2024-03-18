@@ -13,12 +13,12 @@ export default function Detallesdelpedido() {
   justifyContent="center"
   alignItems="flex-start"
   spacing={4}
-  
+
   >
-    <Typography variant="h2" color="primary">Pagar</Typography>
-   <Typography variant="body1" color="primary">Detalles del pedido</Typography>
+    <Typography variant="h2" color="primary">Detalle</Typography>
+   <Typography variant="h5" color="primary">Detalles del pedido</Typography>
    {carri.length>0?<CardsCarr/>:<NotProduct/>}
-   
+
    </Stack>
    </>
   )

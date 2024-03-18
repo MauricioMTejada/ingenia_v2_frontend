@@ -1,29 +1,32 @@
-import React from 'react'
-import axios from "axios"
-import Button from '@mui/material/Button'
-import PaymentIcon from '@mui/icons-material/Payment';
-import { useSelector } from 'react-redux';
+import React from "react";
+import axios from "axios";
+import Button from "@mui/material/Button";
+import PaymentIcon from "@mui/icons-material/Payment";
+import { useSelector } from "react-redux";
 import env from "../../env";
 export default function Paypalbutton() {
-  const totalpagar=useSelector(state=>state.totalCarrito)
-  const idUser=localStorage.getItem("idUser")
+	const totalpagar = useSelector((state) => state.totalCarrito);
+	const idUser = localStorage.getItem("idUser");
 
-  const handlePaymentSuccess = async () => {
-    try {
-      const response = await axios.post(`${env.VITE_HOST}/buy?costo=${totalpagar}&idUser=${idUser}` )
-      window.location.href=response.data.links[1].href
+	const handlePaymentSuccess = async () => {
+		try {
+			const response = await axios.post(
+				`${env.VITE_HOST}/buy?costo=${totalpagar}&idUser=${idUser}`
+			);
+			window.location.href = response.data.links[1].href;
+		} catch (error) {
+			console.error(error);
+		}
+	};
 
-    } catch (error) {
-      console.error(error);
-    }
-
-  };
-
-
-  return (
-    <Button variant="contained" color="primary" sx={{color:"white",fontSize:19}} onClick={handlePaymentSuccess} startIcon={<PaymentIcon sx={{color:"white"}}/>}>
-      pagar con paypal
-    </Button>
-
-  );
+	return (
+		<Button
+			variant="contained"
+			color="primary"
+			sx={{ color: "white", fontSize: 19, margin: "2rem 0" }}
+			onClick={handlePaymentSuccess}
+			startIcon={<PaymentIcon sx={{ color: "white" }} />}>
+			pagar con paypal
+		</Button>
+	);
 }

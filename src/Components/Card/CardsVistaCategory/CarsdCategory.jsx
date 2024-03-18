@@ -11,7 +11,7 @@ export default function Cardsresulcategory() {
   const itemsPerPage = 3;
 
   useEffect(() => {
-    setCurrentPage(1); 
+    setCurrentPage(1);
   }, [cursos]);
 
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -28,8 +28,8 @@ export default function Cardsresulcategory() {
   return (
     <>
       <Box>
-      
-        <Stack spacing={6}>
+
+        <Stack spacing={6} style={{ padding: "2rem 0" }}>
           {currentItems.map((curso) => (
             <CardCategory
               key={curso.idCourse}
@@ -47,6 +47,7 @@ export default function Cardsresulcategory() {
             />
           ))}
         </Stack>
+
         {totalItems > itemsPerPage && (
           <PaginationButtons
             count={totalPages}

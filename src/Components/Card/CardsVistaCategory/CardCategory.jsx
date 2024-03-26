@@ -43,10 +43,15 @@ function CardCategory({
 		<Card
 			sx={{
 				display: "flex",
-				alignItems: "center",
+				alignItems: "flex-start",
 			}}>
 			<CardMedia
-                style={{ minWidth: 400, width: 400, aspectRatio: "16/9", padding: "1rem"}}
+				style={{
+					minWidth: 400,
+					width: 400,
+					aspectRatio: "16/9",
+					padding: "1rem",
+				}}
 				// sx={{ width: 500 }}
 				component="img"
 				image={image}
@@ -163,14 +168,17 @@ function CardCategory({
 								{lenguage}{" "}
 							</Button>
 						</Grid>
-						<Grid marginX={1}>
-							<Button
-								// marginLeft='2'
-								sx={{ backgroundColor: "#E53170", color: "black" }}>
-								{" "}
-								{categories}{" "}
-							</Button>
-						</Grid>
+
+						{categories && (
+							<Grid marginX={1}>
+								<Button
+									// marginLeft='2'
+									sx={{ backgroundColor: "#E53170", color: "black" }}>
+									{" "}
+									{categories}{" "}
+								</Button>
+							</Grid>
+						)}
 					</Grid>
 				</Grid>
 			</CardContent>

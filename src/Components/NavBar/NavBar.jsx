@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 //material UI
 import { AppBar, Box } from "@mui/material";
@@ -27,6 +27,7 @@ import { getInstructorUser } from "../../Redux/actionsProfileAdmin/getInstructor
 import { getIdCoursesuser } from "../../Redux/Actions/getIdCoursesuser";
 import { getIdRatingCourses } from "../../Redux/Actions/getIdRatingCourses";
 import { GetFavoritos } from "../../Redux/Actions/FavoritosActions/GetFavoritos";
+import { setHeight } from "../../Redux/Actions/heightNavBar";
 // Estilos
 import styles from "./NavBar.module.css";
 
@@ -37,6 +38,14 @@ export default function NavBar() {
 	const carrito = useSelector((state) => state.allCarrito);
 	const favorite = useSelector((state) => state.favorites);
 	const favoriteLength = favorite?.length;
+
+	//* Sección para el manejo de la altura de la barra de navegación:
+		const componentRef = useRef(null);
+
+		useEffect(() => {
+			handleNavbarHeight(componentRef, dispatch);
+		}, []);
+
 
 	useEffect(() => {
 		dispatch(getCourses());
@@ -93,7 +102,9 @@ export default function NavBar() {
 			position="fixed"
 			elevation={0}
 			className={navbarClass}
-			sx={{ bgcolor: "background.default" }}>
+			sx={{ bgcolor: "background.default" }}
+			ref={componentRef}
+		>
 			<div className={styles.gridContainer}>
 				<div className={styles.gitdItem01}>
 					<LogoIngenia />
@@ -148,3 +159,19 @@ export default function NavBar() {
 		</AppBar>
 	);
 }
+
+
+const handleNavbarHeight = (componentRef, dispatch) => {
+	const resizeObserver = new ResizeObserver(entries => {
+		if (entries[0]?.target) {
+		const newHeight = entries[0].target.offsetHeight;
+		// console.log("Nuevo valor de altura:", newHeight);
+		dispatch(setHeight(newHeight));
+		}
+	});
+
+	if (componentRef.current)
+		{ resizeObserver.observe(componentRef.current); }
+
+	return () => { resizeObserver.disconnect(); };
+};

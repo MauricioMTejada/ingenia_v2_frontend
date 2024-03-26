@@ -100,6 +100,7 @@ export default function FormLogin({ userType }) {
             value={user.email}
             onChange={handleInput}
             className={styles.input}
+            autoComplete="username"
           />
           {errors.email && (
             <p className={styles.error}>
@@ -121,6 +122,7 @@ export default function FormLogin({ userType }) {
               value={user.password}
               onChange={handleInput}
               className={styles.input}
+              autoComplete="current-password"
             />
             {errors.password && (
               <p className={styles.errorPass}>

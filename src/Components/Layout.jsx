@@ -9,7 +9,7 @@ export const ColorModeContext = React.createContext({
 
 export default function Layout(props) {
   const [mode, setMode] = React.useState(
-    localStorage.getItem("mode") || "light"
+    localStorage.getItem("mode") || "dark"
   );
 
   useEffect(() => {

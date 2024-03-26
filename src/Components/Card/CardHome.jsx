@@ -55,7 +55,6 @@ function CardHome({
 
 	// Lógica para el cambio de color del carrito, según el modo de tema
 	const colorCart = themeMode === "dark" ? "#FFFFFE" : "#000000";
-	console.log(themeMode)
 
 	//Logica para el cambio de color del carrito, según si ha sido comprado
 	useEffect(() => {

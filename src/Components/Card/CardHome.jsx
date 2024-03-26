@@ -44,23 +44,24 @@ function CardHome({
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 
+	// Obtener el modo de tema del estado en Redux
+	const themeMode = useSelector((state) => state.thmeMode);
+
 	const [isActive, setIsActive] = useState(false);
-	const [colorCart, setcolorCart] = useState("");
+	// const [colorCart, setcolorCart] = useState("");
 	const [isAlertAdd, setIsAlertAdd] = useState(false);
 	const [isAlertDelete, setIsAlertDelete] = useState(false);
 	const [purchasedCourse, setPurchasedCourse] = React.useState(false);
 
-	//Logica para el cambio de color del carrito
+	// Lógica para el cambio de color del carrito, según el modo de tema
+	const colorCart = themeMode === "dark" ? "#FFFFFE" : "#000000";
+	console.log(themeMode)
+
+	//Logica para el cambio de color del carrito, según si ha sido comprado
 	useEffect(() => {
-		if (localStorage.getItem("mode") === "dark") {
-			setcolorCart("#FFFFFE");
-		} else {
-			setcolorCart("#000000");
-		}
 
 		// Consulto si el usuario ha comprado éste curso:
 		let myCoursesString = localStorage.getItem("myCourses");
-		//let myCourses = myCoursesString.includes(",") ? myCoursesString.split(",") : [myCoursesString];
 		let myCourses = myCoursesString
 			? myCoursesString.split(",").map(Number)
 			: [Number(myCoursesString)];

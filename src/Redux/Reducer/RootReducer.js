@@ -29,6 +29,7 @@ import { ADD_FAVORITE_REDUX } from "../Actions/FavoritosActions/addFavoritosRedu
 import { DELET_FAVORITOS_REDUX } from "../Actions/FavoritosActions/deletFavoritosRedux";
 import { GET_USER } from "../Actions/getusers";
 import { SET_HEIGHT } from "../Actions/heightNavBar";
+import { UPDATE_MODE } from "../Actions/themeLayout";
 
 const initialState = {
 	allCourse: [],
@@ -52,6 +53,7 @@ const initialState = {
 	cursosUsers: [],
 	myRatingCourses: [],
 	heightNavBar: 0,
+	thmeMode: localStorage.getItem('mode') || 'dark',
 };
 const rootReducer = (state = initialState, action) => {
 	switch (action.type) {
@@ -219,6 +221,12 @@ const rootReducer = (state = initialState, action) => {
 			return {
 				...state,
 				heightNavBar: action.payload,
+			};
+
+		case UPDATE_MODE:
+			return {
+				...state,
+				thmeMode: action.payload,
 			};
 
 		default:
